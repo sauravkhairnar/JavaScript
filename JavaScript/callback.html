@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="callback.js">s</script>
+</head>
+
+<body>
+    <script>
+
+        // function mainFunction(callback) {
+        //   console.log("Performing operation...");
+        //   // Use setTimeout to simulate an asynchronous operation
+        //   setTimeout(function() {
+        //     callback("Operation complete");
+        //   }, 5000);
+        // }
+        // function callbackFunction(result) {
+        //   console.log("Result: " + result);
+        // }
+        // mainFunction(callbackFunction);
+        // let numbers = [1, 2, 3, 4, 5]
+
+        // function mainFunction(callback) {
+        //     console.log("printing the array");
+        //     numbers.forEach(callback);
+        // }
+
+        // function callbackFunction(numbers) {
+        //     console.log("risult:" + numbers)
+
+        // }
+
+        // mainFunction(callbackFunction)
+        let numbers = [1, 2, 3, 4, 5];
+
+        function mainFunction(callback)
+         {
+            console.log("Printing the array with a delay:");
+
+            // Iterate through each number with a delay
+            numbers.forEach((number, index) => {
+                setTimeout(() => {
+                    callback(number);
+                }, 3000 * (index + 1)); // Delay increases for each element
+            });
+        }
+
+        function callbackFunction(number) {
+            console.log("Result: " + number);
+        }
+
+        mainFunction(callbackFunction);
+
+
+    </script>
+
+</body>
+
+</html>

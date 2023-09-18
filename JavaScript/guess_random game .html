@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Generate a random number between 1 and 100 (you can adjust the range as needed)
+const min = 1;
+const max = 100;
+const targetNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+
+let numberOfTries = 0;
+let guess;
+
+// Function to prompt the player for a guess and check if it's correct
+function playGame() {
+  guess = parseInt(prompt(`Guess the number between ${min} and ${max}:`));
+
+  // Check if the guess is valid (a number within the range)
+  if (isNaN(guess) || guess < min || guess > max) {
+    alert(`Please enter a valid number between ${min} and ${max}.`);
+    playGame(); // Recursively call playGame to prompt again
+    return;
+  }
+
+  numberOfTries++;
+
+  // Check if the guess is correct
+  if (guess === targetNumber) {
+    alert(`Congratulations! You guessed the number ${targetNumber} in ${numberOfTries} tries.`);
+  } else if (guess < targetNumber) {
+    alert(`Try higher. You've made ${numberOfTries} tries.`);
+    playGame(); // Recursively call playGame for the next guess
+  } else {
+    alert(`Try lower. You've made ${numberOfTries} tries.`);
+    playGame(); // Recursively call playGame for the next guess
+  }
+}
+
+// Start the game
+playGame();
+
+
+    </script>
+</body>
+
+</html>

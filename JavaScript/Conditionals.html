@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Condtionals Statment</title>
+</head>
+
+<body>
+  <script>
+    // let a=prompt("hey...Whats is your age..? ")
+
+    if (a>18)
+    {
+      window.alert("You are Eligible for Voting")
+    }
+    else
+    {
+      window.alert("You are not Eligible for Voting")
+    }
+     let a= prompt("Hey Enter the Age ");
+     if(a<18)
+     {
+      alert("You Are NoN Voter")
+     }
+     else{
+      alert("You Are Voter")
+     }if (a==18) {
+      alert("You should alse give the vote")
+
+     } else {
+      alert("You Can Not")
+     }
+    // Prompt the user for a numeric input (1-7)
+const userInput = prompt("Enter a number (1-7):");
+const dayNumber = parseInt(userInput);
+
+// Use a switch statement to determine the day of the week
+let dayOfWeek;
+
+switch (dayNumber) {
+  case 1:
+    dayOfWeek = "Sunday";
+    break;
+  case 2:
+    dayOfWeek = "Monday";
+    break;
+  case 3:
+    dayOfWeek = "Tuesday";
+    break;
+  case 4:
+    dayOfWeek = "Wednesday";
+    break;
+  case 5:
+    dayOfWeek = "Thursday";
+    break;
+  case 6:
+    dayOfWeek = "Friday";
+    break;
+  case 7:
+    dayOfWeek = "Saturday";
+    break;
+  default:
+    dayOfWeek = "Invalid input";
+}
+
+// Display the result
+alert(`The day of the week is: ${dayOfWeek}`);
+
+  </script>
+
+</body>
+
+</html>

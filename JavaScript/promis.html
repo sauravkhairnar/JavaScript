@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <script src="promis.js">
+
+    </script>
+</head>
+
+<body>
+    <script>
+        // let promis = new Promise(function (resoleve, rejected) {
+        //     let x="saurav";
+        //     let y="saurav";
+        //     if (x==y)
+        //     {
+        //         resoleve();
+        //     }else
+        //     {
+        //         rejected();
+        //     }
+
+        // });
+        // promis.then(function(){
+        //     console.log("your promise is commited ")
+        // })
+        // .catch(function()
+        // {
+        //       console.log("Somthing error");
+        // });
+        // let promise1 = new Promise(function (resolve, reject) {
+        //     let x = 40;
+        //     let y = 50;
+
+        //     setTimeout(function () {
+        //         if (x > y) {
+        //             resolve();
+        //         } else {
+        //             reject();
+        //         }
+        //     }, 2000); // Introduce a 2-second delay before resolving or rejecting
+        // });
+
+        // promise1.then(function () {
+        //     console.log("Resolve");
+        // }).catch(function () {
+        //     console.log("Wrong");
+        // });
+        let promise = new Promise((resolve, reject) => {
+            resolve("Hello JavaScript !");
+        });
+
+        promise.then((result)=>
+        {
+            console.log(result);
+        })
+        
+    </script>
+</body>
+
+</html>
